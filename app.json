@@ -11,6 +11,11 @@
     "ios": {
       "supportsTablet": true
     },
+    "extra": {
+      "expo-router": {
+        "origin": "app"
+      }
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
