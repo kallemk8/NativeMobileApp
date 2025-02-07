@@ -17,6 +17,8 @@ export default function RootLayout() {
         <Stack.Screen name="Login" options={{ headerShown: false }} />
         <Stack.Screen name="Register" options={{ headerShown: false }} />
         <Stack.Screen name="Dashboard" options={{ headerShown: false }} />
+        <Stack.Screen name="IntentsList" options={{ headerShown: false }} />
+        
  
       </Stack>
       <StatusBar style="auto" />

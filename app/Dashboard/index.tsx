@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   SectionList,
   StatusBar,
+  TouchableHighlight,
 } from 'react-native';
 import { useState, useEffect } from "react";
 import { useRouter } from 'expo-router';
@@ -46,7 +47,7 @@ export default function Home() {
   const getChatbotlist = (Admintoken:any) => {
     axios.defaults.headers.common = { 'Authorization':`Bearer ${Admintoken}`}
       axios.get("https://chatportal.pranathiss.com/qxbox/apiV1/chatbot/").then((response) => {
-        console.log(response.data)
+         
         setDATA(response.data);
       });
   }
@@ -54,9 +55,11 @@ export default function Home() {
     <SafeAreaView style={styles.container}>
       {DATA.map((item,i )=>{
         return(
-          <View style={styles.item}>
+          <TouchableHighlight onPress={()=>router.push("/Intents")}>
+          <View style={styles.item} >
             <Text style={styles.title} >{item?.name}</Text>
           </View>
+          </TouchableHighlight>
         )
       })}
     </SafeAreaView>
@@ -78,9 +81,10 @@ const styles = StyleSheet.create({
 
   },
   item: {
-    backgroundColor: '#f9c2ff',
+    backgroundColor: 'rgb(233 230 230)',
     padding: 20,
     marginVertical: 8,
+    boxShadow:"0px 3px 4px 0px #ccc"
   },
   header: {
     fontSize: 32,
