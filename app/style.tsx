@@ -17,6 +17,9 @@ const commonStyles = StyleSheet.create({
     width: '100%',
 
   },
+  gradient: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     padding: 20,
