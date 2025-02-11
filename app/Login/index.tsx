@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { commonStyles } from './../style'
+import { LinearGradient } from 'expo-linear-gradient'; //for expo
 export default function Index() {
   const router = useRouter();
   const [email, setEmail] = useState()
@@ -78,8 +79,13 @@ export default function Index() {
 
   }
   return (
-
-    <ImageBackground source={require('./../../assets/background_dot.png')} resizeMode="repeat" style={commonStyles.FullWidthScreen} >
+    <LinearGradient
+            colors={['#FF9933', '#FFFFFF', '#138808']}
+            start={{ x: 0.84, y: 0.01 }}
+            end={{ x: 0.0, y: 1.0 }}
+            style={commonStyles.gradient}
+          >
+     
       <KeyboardAvoidingView style={commonStyles.container} behavior="padding">
         {/* <TouchableOpacity onPress={()=>router.push('/')} style={styles.container2}>
           <Image
@@ -89,8 +95,10 @@ export default function Index() {
 
 
         </TouchableOpacity> */}
-        <Image source={require('./../../assets/logo.png')} style={commonStyles.imagelogo} />
-        <Text style={commonStyles.header}   >Welcome back.</Text>
+        <Image source={require('./../../assets/images/bplogo.png')} style={commonStyles.imagelogo} />
+        <Image source={require('./../../assets/images/tradition.jpg')} style={commonStyles.imagelogo2} />
+        <Text style={commonStyles.header}   >Streamlining Payroll, Simplifying Lives.</Text>
+        <Text style={commonStyles.header2} >Log in to access your dashboard and manage payroll with ease.</Text>
         <TextInput
           style={commonStyles.input}
           value={email}
@@ -128,7 +136,6 @@ export default function Index() {
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
-    </ImageBackground>
-
+      </LinearGradient>
   );
 }

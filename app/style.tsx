@@ -9,7 +9,7 @@ const colors = {
   white: '#FFF',
   black: '#000',
   forgot: "#ff0000",
-  button: "rgb(86, 12, 206)"
+  button: "#000080"
 };
 const commonStyles = StyleSheet.create({
   FullWidthScreen: {
@@ -30,15 +30,29 @@ const commonStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   imagelogo: {
-    width: 110,
-    height: 110,
+    width: 153,
+    height: 60,
     marginBottom: 8,
   },
+  imagelogo2:{
+    width: 100,
+    height: 100,
+    marginBottom: 8,
+    borderRadius:100
+  },
   header: {
-    fontSize: 21,
-    color: colors.secondary,
+    fontSize: 32,
+    color: "#1A1A1A",
     fontWeight: 'bold',
     paddingVertical: 12,
+    textAlign:"center",
+    marginBottom:15
+  },
+  header2:{
+    color:"#4F4F4F",
+    fontSize:14,
+    textAlign:"center",
+    marginBottom:15
   },
   text: {
     fontSize: 16,
@@ -58,11 +72,12 @@ const commonStyles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#79747E',
     borderRadius: 8,
     padding: 12,
     fontSize: 16,
     marginBottom: 15,
+    height:56,
     backgroundColor: colors.white,
     width: "100%",
   },
@@ -82,7 +97,8 @@ const commonStyles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: colors.button,
     textAlign: "center",
-    borderRadius: 8,
+    borderRadius: 100,
+    height:44
   },
 
   Commonbutton2: {
