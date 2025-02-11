@@ -38,7 +38,9 @@ export default function Layout() {
           tabBarIcon: ({ color, size }) => (
             <Icon name="calendar-check-o" size={size} color={color} />
           ),
+          headerShown:false
         }}
+        
       />
       <Tabs.Screen
         name="Leave"

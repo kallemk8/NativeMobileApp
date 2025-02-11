@@ -8,6 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient'; //for expo
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 export default function Index() {
+    const router = useRouter();
     return (
         <LinearGradient colors={['#FF9933', '#FFFFFF', '#138808']} start={{ x: 0.84, y: 0.01 }} end={{ x: 0.0, y: 1.0 }} style={commonStyles.gradient} >
             <View style={commonStyles.flexcontainer}>
@@ -88,8 +89,10 @@ export default function Index() {
                             <Text>View Details</Text>
                         </View>
                         <View style={commonStyles.modules}>
+                            <TouchableOpacity style={commonStyles.button2} onPress={() => router.push('/HRMS/Attendance')}>
                             <Text>Profile</Text>
                             <Text>View Details</Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>

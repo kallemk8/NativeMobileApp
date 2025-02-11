@@ -5,6 +5,7 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { commonStyles } from './../style'
 import { LinearGradient } from 'expo-linear-gradient'; //for expo
+import Icon from 'react-native-vector-icons/FontAwesome';
 export default function Attendance() {
   const router = useRouter();
   const [email, setEmail] = useState()
@@ -79,68 +80,57 @@ export default function Attendance() {
 
   }
   return (
-    <LinearGradient
-      colors={['#FF9933', '#FFFFFF', '#138808']}
-      start={{ x: 0.84, y: 0.01 }}
-      end={{ x: 0.0, y: 1.0 }}
-      style={commonStyles.gradient}
-    >
-
-      <KeyboardAvoidingView style={commonStyles.container} behavior="padding">
-        {/* <TouchableOpacity onPress={()=>router.push('/')} style={styles.container2}>
-          <Image
-            style={styles.image}
-            source={require('./../../assets/arrow_back.png')}
-          />
-
-
-        </TouchableOpacity> */}
-        <Image source={require('./../../assets/images/bplogo.png')} style={commonStyles.imagelogo} />
-        <Image source={require('./../../assets/images/tradition.jpg')} style={commonStyles.imagelogo2} />
-        <Text style={commonStyles.header}   >Streamlining Payroll, Simplifying Lives.</Text>
-        <Text style={commonStyles.header2} >Log in to access your dashboard and manage payroll with ease.</Text>
-        <View style={commonStyles.positionRelative}>
-          {/* <Text style={commonStyles.labelStyle}>Email Address</Text> */}
-          <TextInput
-            style={commonStyles.input}
-            value={email}
-            onChangeText={(e) => handleInputChange(e, "email")}
-            placeholder="Email"
-
-          />
+    <LinearGradient colors={['#FF9933', '#FFFFFF', '#138808']} start={{ x: 0.84, y: 0.01 }} end={{ x: 0.0, y: 1.0 }} style={commonStyles.gradient} >
+      <View style={commonStyles.flexcontainer}>
+        {/* Left Section */}
+        <View style={commonStyles.left}>
+          <Image source={require('./../../assets/images/tradition.jpg')} style={commonStyles.imagelogo3} />
         </View>
-        <View style={commonStyles.positionRelative}>
-        {/* <Text style={commonStyles.labelStyle}>Password</Text> */}
-        <TextInput
-          style={commonStyles.input}
-          value={password}
-          secureTextEntry={true}
-          onChangeText={(e) => handleInputChange(e, "password")}
-          placeholder="Password"
 
-        />
+        {/* Middle Section */}
+        <View style={commonStyles.middle}>
+          <Image source={require('./../../assets/images/bplogo.png')} style={commonStyles.imagelogo4} />
         </View>
-        <View style={commonStyles.forgotPassword}>
-          <TouchableOpacity
-            onPress={() => console.log('enter')}
-          >
-            <Text style={commonStyles.forgot}>Forgot your password?</Text>
-          </TouchableOpacity>
+
+        {/* Right Section */}
+        <View style={commonStyles.right}>
+          <Icon name="bell-o" size={20} color="#000" />
         </View>
-        {disable ? <ActivityIndicator size="large" color="#0000ff" /> : ""}
-        <View >
-          <Text style={commonStyles.link}>{loginEmailerror}</Text>
+      </View>
+      <View style={commonStyles.checkInHolder} >
+
+       
+        
+        <View>
+          <Text style={commonStyles.welcometext}>Welcome back, Bruce Lee!</Text>
         </View>
-        <TouchableOpacity style={disable ? commonStyles.Commonbutton2 : commonStyles.Commonbutton} onPress={onPress}>
-          <Text style={commonStyles.buttonText}>Login</Text>
-        </TouchableOpacity>
-        <View style={commonStyles.row}>
-          <Text>Don’t have an account? </Text>
-          <TouchableOpacity onPress={() => router.push('/Register')}>
-            <Text style={commonStyles.link}>Sign up</Text>
-          </TouchableOpacity>
+        <View style={commonStyles.flexcontainer}>
+          <View style={commonStyles.left3}>
+            <View style={commonStyles.modules}>
+              <Text>Profile</Text>
+              <Text>View Details</Text>
+            </View>
+            <View style={commonStyles.modules}>
+              <Text>Profile</Text>
+              <Text>View Details</Text>
+            </View>
+          </View>
+          <View style={commonStyles.right2}>
+            <View style={commonStyles.modules}>
+              <Text>Attendance</Text>
+              <Text>View Details</Text>
+            </View>
+            <View style={commonStyles.modules}>
+              <TouchableOpacity style={commonStyles.button2} onPress={() => router.push('/HRMS/Attendance')}>
+                <Text>Profile</Text>
+                <Text>View Details</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
-      </KeyboardAvoidingView>
+      </View>
+
+
     </LinearGradient>
   );
 }
