@@ -24,7 +24,7 @@ const commonStyles = StyleSheet.create({
     flex: 1,
     padding: 20,
     width: '100%',
-    maxWidth: 340,
+
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
@@ -34,25 +34,36 @@ const commonStyles = StyleSheet.create({
     height: 60,
     marginBottom: 8,
   },
-  imagelogo2:{
+  imagelogo4: {
+    width: 100,
+    height: 40
+  },
+  imagelogo2: {
     width: 100,
     height: 100,
     marginBottom: 8,
-    borderRadius:100
+    borderRadius: 100
+  },
+  imagelogo3: {
+    width: 50,
+    height: 50,
+    marginBottom: 8,
+    borderRadius: 100,
+    margin: 10
   },
   header: {
     fontSize: 32,
     color: "#1A1A1A",
     fontWeight: 'bold',
     paddingVertical: 12,
-    textAlign:"center",
-    marginBottom:15
+    textAlign: "center",
+    marginBottom: 15
   },
-  header2:{
-    color:"#4F4F4F",
-    fontSize:14,
-    textAlign:"center",
-    marginBottom:15
+  header2: {
+    color: "#4F4F4F",
+    fontSize: 14,
+    textAlign: "center",
+    marginBottom: 15
   },
   text: {
     fontSize: 16,
@@ -76,8 +87,8 @@ const commonStyles = StyleSheet.create({
     borderRadius: 8,
     padding: 12,
     fontSize: 16,
-    marginBottom: 15,
-    height:56,
+    marginBottom: 25,
+    height: 56,
     backgroundColor: colors.white,
     width: "100%",
   },
@@ -98,7 +109,22 @@ const commonStyles = StyleSheet.create({
     backgroundColor: colors.button,
     textAlign: "center",
     borderRadius: 100,
-    height:44
+    height: 54,
+    lineHeight: 54
+  },
+  CheckINButton: {
+    width: 132,
+    marginVertical: 10,
+    paddingVertical: 10,
+    backgroundColor: "rgba(62, 148, 0, 1)",
+    paddingLeft: 16,
+    paddingRight: 16,
+    paddingTop: 10,
+    paddingBottom: 10,
+    textAlign: "center",
+    borderRadius: 100,
+    height: 44,
+
   },
 
   Commonbutton2: {
@@ -126,32 +152,139 @@ const commonStyles = StyleSheet.create({
   title: {
     fontSize: 24,
   },
-  textparagraphLeft:{
+  textparagraphLeft: {
     fontSize: 15,
     lineHeight: 21,
     textAlign: 'left',
     marginBottom: 12,
   },
-  textparagraph:{
+  textparagraph: {
     fontSize: 15,
     lineHeight: 21,
     textAlign: 'center',
     marginBottom: 12,
   },
-  button2:{
+  button2: {
     width: '100%',
     marginVertical: 10,
     paddingVertical: 10,
     backgroundColor: colors.white,
     borderRadius: 10,
-     
+
   },
-  buttonText2:{
+  buttonText2: {
     fontWeight: 'bold',
     fontSize: 15,
     lineHeight: 26,
     textAlign: "center",
     color: colors.button
+  },
+  labelStyle: {
+    backgroundColor: "#fff",
+    color: "#000",
+    textAlign: "left",
+    position: "absolute",
+    top: -15,
+    left: 10,
+    zIndex: 999,
+    fontSize: 16,
+    padding: 5
+  },
+  positionRelative: {
+    position: "relative",
+    width: "100%"
+  },
+  flexcontainer: {
+
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10, // Optional: Adds spacing on sides
+    paddingTop: 10
+  },
+  left: {
+    flex: 1,
+    justifyContent: 'flex-start',
+  },
+
+  left2: {
+    flexDirection: "row",  // Places icon & text side by side
+    alignItems: "center",
+    flex: 1,  // Allow it to take space
+  },
+  middle: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  right: {
+    flex: 1,
+    alignItems: 'flex-end',
+    paddingRight: 20
+
+  },
+  right2:{
+    flex:1,
+    justifyContent: 'center',
+        alignItems: 'center',
+  },
+  left3:{
+    flex:1,
+    justifyContent: 'center',
+        alignItems: 'center',
+  },
+  checkInHolder: {
+    borderWidth: 1,
+    borderColor: '#fff',
+    borderRadius: 50,
+
+    padding: 12,
+  },
+  checkintext: {
+    fontSize: 12,
+    color: "#4F4F4F"
+
+  },
+  checkintextSub: {
+    fontSize: 16,
+    color: "#000"
+
+  },
+  borderwithOne: {
+
+    borderColor: '#808080',
+
+    borderRightWidth: 2,
+  },
+  marginTop50: {
+    marginTop: 15,
+    marginBottom: 15
+  },
+  iconContainer: {
+    marginRight: 10, // Adds space between icon and text
+    paddingRight: 20,
+    paddingLeft: 10
+  },
+  textContainer: {
+    justifyContent: "center",
+  },
+  welcometext:{
+    fontSize:18,
+    fontWeight:"bold",
+    color:"#333",
+    textAlign:"center",
+    marginTop:15,
+    marginBottom:15
+  },
+  modules:{
+    borderWidth: 1,
+    borderColor: '#fff',
+    padding:10,
+    width:"95%",
+    marginRight:15,
+   // backgroundColor:"#fff",
+    marginBottom:15,
+    boxShadow:"0px 5px 2px 0px #ccc"
   }
 });
 
