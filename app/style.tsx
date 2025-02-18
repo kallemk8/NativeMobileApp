@@ -79,7 +79,14 @@ const commonStyles = StyleSheet.create({
     fontSize: 16,
     color: colors.white,
     fontWeight: 'bold',
-    textAlign: "center"
+    textAlign: "center",
+    lineHeight:54
+  },
+  CheckINbuttonText:{
+    fontSize: 16,
+    color: colors.white,
+    fontWeight: 'bold',
+    textAlign: "center",
   },
   input: {
     borderWidth: 1,
@@ -104,13 +111,12 @@ const commonStyles = StyleSheet.create({
   },
   Commonbutton: {
     width: '100%',
-    marginVertical: 10,
-    paddingVertical: 10,
+       
     backgroundColor: colors.button,
     textAlign: "center",
     borderRadius: 100,
     height: 54,
-    lineHeight: 54
+     
   },
   CheckINButton: {
     width: 132,
@@ -169,7 +175,7 @@ const commonStyles = StyleSheet.create({
     marginVertical: 10,
     paddingVertical: 10,
     backgroundColor: colors.white,
-    borderRadius: 10,
+    borderRadius: 100,
 
   },
   buttonText2: {
@@ -285,7 +291,111 @@ const commonStyles = StyleSheet.create({
    // backgroundColor:"#fff",
     marginBottom:15,
     boxShadow:"0px 5px 2px 0px #ccc"
-  }
+  },
+  marginTopbottom:{
+    marginBottom:10,
+    marginTop:10
+  },
+  floatleft:{
+    
+  },
+  card: {
+    width: '48%',
+    backgroundColor: 'rgba(255,255,255,0.5)',
+    padding: 16,
+    borderRadius: 10,
+    marginBottom: 12,
+     
+    shadowColor: '#fff',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity:  1,
+    shadowRadius: 10,
+  },
+  container2: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  iconContainer2: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  title2: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 8,
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#7F8C8D',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContainer: {
+    backgroundColor: '#fff',
+    padding: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    width: '80%',
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 10,
+
+  },
+  modalTitle2: {
+    fontSize: 11,
+    fontWeight: 'bold',
+    marginTop: 10,
+    color:"#4F4F4F"
+  },
+  modalTitle3: {
+    fontSize: 11,
+    fontWeight: 'bold',
+    marginTop: 10,
+    color:"#4F4F4F",
+    paddingBottom:10,
+    paddingTop:10
+  },
+  modalSubtitle: {
+    fontSize: 16,
+    color: '#7F8C8D',
+    marginTop: 5,
+  },
+  closeButton: {
+    marginTop: 15,
+    padding: 10,
+    backgroundColor: '#E94E77',
+    borderRadius: 5,
+  },
+  closeText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    textAlign:"center",
+    lineHeight:54
+  },
+  radioContainer: {
+    flexDirection: 'row', // Align items horizontally
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  radioItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+  radioText: {
+    fontSize: 16,
+    marginLeft: 5,
+  },
 });
 
 export { colors, commonStyles };

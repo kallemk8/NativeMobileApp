@@ -50,7 +50,7 @@ export default function Index() {
           setdisable(false)
           storeData("Admintoken", accesstoken)
 
-          router.push('/Dashboard')
+          router.push('/HRMS')
 
         }).catch((e) => {
           if (e.response.data.message) {
